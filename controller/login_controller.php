@@ -1,5 +1,5 @@
 <?php
-
+include '../commons/session.php';
 if (!isset($_GET["status"])) {
     ?>
     <script>
@@ -29,9 +29,20 @@ switch ($status) {
             $loginResult = $loginObj ->validateUser($login_username,$login_password);
             // if matching records are found
             if ($loginResult->num_rows>0) {
-                echo "Successfull";
+
+                //converting $loginResult to array
+                $userrow = $loginResult -> fetch_assoc();
+
+                $_SESSION["user"]=$userrow;
+
+                ?>
+                    <script>
+                        window.location="../view/dashboard.php";
+                    </script>
+                <?php
+
             }else {
-                echo "Invalid Credentials";
+                throw new Exception("Invalid Credentials"); 
             }
                 
         } catch (Exception $ex) {
