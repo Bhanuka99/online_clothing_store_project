@@ -6,7 +6,19 @@
 <body>
     <div clss="container">
         <div class="row" style="height:100px"></div>
-        <form action="" method="post">
+        <form action="../controller/login_controller.php?status=login" method="post">
+        <div class="row">
+            <div id="msg" class="col-md-6 col-md-offset-3"></div>
+            <?php
+                if (isset($_GET["msg"])) {      
+            ?>
+            <div class="col-md-6 col-md-offset-3 alert alert-danger">
+                <?php echo base64_decode($_GET["msg"]); ?>
+            </div>
+            <?php
+                }
+            ?>
+        </div>  
         <div class="row">
             <div class="col-md-8 col-md-offset-2 panel panel-default" style="height:400px">
                 <div class="col-md-6" style="height:400px">
@@ -23,7 +35,7 @@
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-user"></span>
                                 </span>
-                                <input type="email" name="loginusername" id="loginusername" class="form-control" required="required">
+                                <input type="email" name="loginusername" id="loginusername" class="form-control">
                             </span>
                         </div>  
                     </div>   
@@ -34,7 +46,7 @@
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-lock"></span>
                                 </span>
-                                <input type="password" name="loginpassword" id="loginpassword" class="form-control" required="required">
+                                <input type="password" name="loginpassword" id="loginpassword" class="form-control">
                             </span>
                         </div>
                     </div>
@@ -55,4 +67,6 @@
     </form> 
     </div>
 </body>
+<script src="../js/jquery-3.7.1.js"></script>
+<!-- <script src="../js/loginvalidation.js"></script> -->
 </html>
