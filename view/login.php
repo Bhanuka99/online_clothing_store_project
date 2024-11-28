@@ -27,7 +27,7 @@
                 <div class="col-md-6" style="height:400px"">
                     <div class="row">&nbsp;</div>
                     <div class="row">
-                        <label style="font-size:18px;">Sign Into Your Account</label>
+                        <label style="font-size:18px;">Log Into Your Account</label>
                     </div> 
                     <div class="row">
                         <div class="col-md-12">
