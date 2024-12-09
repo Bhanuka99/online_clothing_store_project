@@ -24,7 +24,7 @@
                 <div class="col-md-6" style="height:400px">
                     <img src="../images/logo.png" height="400px">
                 </div>
-                <div class="col-md-6" style="height:400px"">
+                <div class="col-md-6" style="height:400px">
                     <div class="row">&nbsp;</div>
                     <div class="row">
                         <label style="font-size:18px;">Log Into Your Account</label>
