@@ -67,6 +67,6 @@
     </form> 
     </div>
 </body>
-<script src="../js/jquery-3.7.1.js"></script>
+<!-- <script src="../js/jquery-3.7.1.js"></script> -->
 <!-- <script src="../js/loginvalidation.js"></script> -->
 </html>

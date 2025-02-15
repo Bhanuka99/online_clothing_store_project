@@ -2,10 +2,11 @@
 
 include '../commons/db_connection.php';
 $dbcon =  new DbConnection();
-class Module{
-    function getAllModules(){
+class Roles{
+
+    function getAllRoles(){
         $conn = $GLOBALS["con"];
-        $sql = "SELECT * FROM module";
+        $sql = "SELECT * FROM role";
         $result = $conn -> query($sql) or die($conn->error);
         return $result;
     }

@@ -1,23 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
-</head>
-<body>
-    <div class ="container-fluid">
-        <div class ="col-md-6 col-sm-8" style ="height:50px; background-color:red;">
+<?php
 
-        </div>
-        <div class ="col-md-6 col-sm-4" style ="height:50px; background-color:blue;">
+$url="";
 
-        </div>
-        <div class = "row"></div>
-        <div class ="col-md-6 col-sm-4" style ="height:50px; background-color:blue;">
+if(!empty($_SERVER["https"])){
+    $url="https://";
+}
+else{
+    $url="https://";
+}
 
-        </div>
-    </div>
-</body>
-</html>
+    $hostname=$_SERVER["HTTP_HOST"];
+
+    $url.=$hostname;
+    $url.="/onlineclothsstore/view/login.php";
+
+    ?>
+
+    <script>
+        window.location="<?php echo $url; ?>";
+    </script>
+
+    <?php

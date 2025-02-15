@@ -14,32 +14,13 @@ $moduleResult = $moduleObj->getAllModules();
 <html>
 <head>
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css"/>
+    <?php include_once "../includes/bootstrap_css_includes.php"; ?>
 </head>
 <body>
     <div class="container">
-        <div class="row" style="height: 40px;">&nbsp;</div>
-        <div class="row" style="height:75px">
-        <div class="col-md-3" >
-            <img src="../images/logo.png" width="70px" height="80px"/>
-        </div>
-        <div class="col-md-6">
-            <h1 align ="center">Online Clothestore</h1>
-        </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-md-3" >
-                <?php echo ucwords($userrow["user_fname"]." ".$userrow["user_lname"]) ?>
-            </div>
-            <div class="col-md-6">
-                <h4 align ="center">Online Clothestore</h4>
-            </div>
-            <div class="col-md-2 col-md-offset-1">
-                <a href="" class="btn btn-primary">Log out</a>
-            </div>  
-        </div> 
-        <hr>
+        <?php $pageName = "DASHBOARD"; ?>
+
+        <?php include_once "../includes/header_row_includes.php"; ?>
         <?php
             while($module_row = $moduleResult->fetch_assoc()){ 
         ?>

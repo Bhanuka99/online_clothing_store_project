@@ -14,7 +14,7 @@ include '../model/login_model.php';
 $loginObj = new Login();
 
 switch ($status) {
-    case 'login':
+    case "login":
         $login_username = $_POST["loginusername"]; 
         $login_password = $_POST["loginpassword"];
         
@@ -56,5 +56,12 @@ switch ($status) {
         }
 
         break;
+        case "logout":
+            session_destroy();
+            ?>
+                <script>
+                    window.location="../view/login.php";
+                </script>
+            <?php
 
 }
